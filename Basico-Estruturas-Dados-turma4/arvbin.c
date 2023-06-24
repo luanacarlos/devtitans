@@ -65,7 +65,7 @@ void imprime_pos (Arv* a){
 }
 
 int main(){
-
+  //QUESTÃO 2
   Arv* g = cria(67, inicializa(), inicializa());
   Arv* f = cria(34,inicializa(), g);
   Arv* e = cria(12,inicializa(), inicializa());
@@ -73,6 +73,24 @@ int main(){
   Arv* k = cria(40,inicializa(),inicializa());
   Arv* l = cria(80, inicializa(), k);
   Arv* a = cria(45, d, l);
+  printf("+++++ QUESTAO 2 +++++\n");
+  printf("IMPRESSAO PRE FIXADA:");
+  imprime_pre(a);
+  printf("\n");
+  printf("IMPRESSAO IN FIXADA:");
+  imprime_in(a);
+  printf("\n");
+  printf("IMPRESSAO POS FIXADA:");
+  imprime_pos(a);
+  printf("\n\n");
+
+  //QUESTÃO 3
+  printf("+++++ QUESTAO 3 +++++\n");
+
+  Arv* subC = cria(66, inicializa(), inicializa());
+  Arv* subB = cria(31, inicializa(), inicializa());
+  Arv* subA = cria(3, subC, subB);
+  l->esq = subA;
   printf("IMPRESSAO PRE FIXADA:");
   imprime_pre(a);
   printf("\n");
@@ -82,5 +100,6 @@ int main(){
   printf("IMPRESSAO POS FIXADA:");
   imprime_pos(a);
   printf("\n");
+
 	
 }
