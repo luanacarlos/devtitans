@@ -99,6 +99,19 @@ int main(){
   printf("\n");
   printf("IMPRESSAO POS FIXADA:");
   imprime_pos(a);
+  printf("\n\n");
+
+  //QUESTÃO 4
+  printf("+++++ QUESTAO 4 +++++\n");
+  d->dir = libera(f);
+  printf("IMPRESSAO PRE FIXADA:");
+  imprime_pre(a);
+  printf("\n");
+  printf("IMPRESSAO IN FIXADA:");
+  imprime_in(a);
+  printf("\n");
+  printf("IMPRESSAO POS FIXADA:");
+  imprime_pos(a);
   printf("\n");
 
 	

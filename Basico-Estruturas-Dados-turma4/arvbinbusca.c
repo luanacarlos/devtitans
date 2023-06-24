@@ -34,7 +34,7 @@ Arv* insere (Arv* a, int v)
 
 
 Arv* libera (Arv* a){
-  if (!vazia(a)){
+  if (a!=NULL){
     libera(a->esq); /* libera sae */
     libera(a->dir); /* libera sad */
     free(a); /* libera raiz */
@@ -43,14 +43,42 @@ Arv* libera (Arv* a){
 }
 
 
-void imprime-in (Arv* r)
-{
-
+void imprime_in(Arv* r){
+  if (r != NULL) {
+    imprime_in(r->esq); // Imprime a subárvore esquerda
+    printf("%d ", r->info); // Imprime o nó atual
+    imprime_in(r->dir); // Imprime a subárvore direita
+  }
 }
 
 
 
-void main(void)
-{
+void main(void){
+  Arv* a = NULL;
+  a = insere(a, 1);
+  imprime_in(a);
+  printf("\n");
+  a = insere(a, 2);
+  imprime_in(a);
+  printf("\n");
+  a = insere(a, 3);
+  imprime_in(a);
+  printf("\n");
+  a = insere(a, 15);
+  imprime_in(a);
+  printf("\n");
+  a = insere(a, 7);
+  imprime_in(a);
+  printf("\n");
+
+  int lista_busca[] = {2,8};
+  for(int i = 0; i < 2; i++){
+    if(busca(a, lista_busca[i])){
+      printf("\nO número %d está na lista\n", lista_busca[i]);
+    }
+    else{
+      printf("\nO número %d não está na lista\n", lista_busca[i]);
+    }
+  }
 
 }

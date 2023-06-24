@@ -61,5 +61,37 @@ int busca (ArvGen* a, char c)
 
 int main()
 {
-	
+	ArvGen* a = cria(43);
+  ArvGen* b = cria(22);
+  ArvGen* c = cria(66);
+  ArvGen* d = cria(31);
+  ArvGen* e = cria(21);
+  ArvGen* f = cria(58);
+  ArvGen* g = cria(71);
+  ArvGen* h = cria(59);
+  ArvGen* i = cria(12);
+  ArvGen* j = cria(45);
+  ArvGen* k = cria(35);
+  insere(b, d);
+  insere(b, c);
+  insere(j, k);
+  insere(f, i);
+  insere(f, h);
+  insere(f, g);
+  insere(a, j);
+  insere(a, f);
+  insere(a, e);
+  insere(a, b);
+  imprime(a);
+  
+  int lista_busca[] = {12, 88, 77, 66};
+  for(int i = 0; i < 4; i++){
+    if(busca(a, lista_busca[i])){
+      printf("\nO número %d está na lista\n", lista_busca[i]);
+    }
+    else{
+      printf("\nO número %d não está na lista\n", lista_busca[i]);
+    }
+  }
+
 }
