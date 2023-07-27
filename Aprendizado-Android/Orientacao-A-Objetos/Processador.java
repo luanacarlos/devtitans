@@ -21,6 +21,7 @@ public class Processador {
     }
 
     public String getDescricao(){
-        return System.out.printf("Processador: marca=%s, modelo=%s,%nvelocidade=%dGHz")
+        return String.format("Processador: marca=%s, modelo=%s, velocidade=%.1fGHz, numNucleos=%d, velocidadeParalela=%.1fGHz.", this.marca, this.modelo, this.velocidade, this.numNucleos, getVelocidadeParalela());
     }
+    
 }
